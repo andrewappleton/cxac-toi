@@ -1,0 +1,3 @@
+oauthClientId = "<client-id>"
+oauthClientSecret = "<client-secret>"
+oauthAWSRegion = "<region>"

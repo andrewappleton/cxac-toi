@@ -1,0 +1,56 @@
+inboundEmail:
+  name: CXaC_Email_Flow
+  division: CXaC_Division
+  startUpRef: "/inboundEmail/states/state[Initial State_10]"
+  defaultLanguage: en-us
+  supportedLanguages:
+    en-us:
+      defaultLanguageSkill:
+        noValue: true
+  variables:
+    - stringVariable:
+        name: Flow.EmailAddress
+        initialValue:
+          noValue: true
+        isOutput: false
+  settingsInboundEmailHandling:
+    emailHandling:
+      disconnect:
+        none: true
+  settingsErrorHandling:
+    errorHandling:
+      queue:
+        targetQueue:
+          lit:
+            name: CXaC_Q_Email
+  states:
+    - state:
+        name: Initial State
+        refId: Initial State_10
+        actions:
+          - sendAutoReply:
+              name: Send Auto Reply
+              from:
+                noValue: true
+              replyTo:
+                noValue: true
+              cc:
+                noValue: true
+              bcc:
+                noValue: true
+              messageBody:
+                lit: Thank you for your message.  You will receive a response from one of our agents shortly!
+              replyMode: replyToSender
+          - transferToAcd:
+              name: Transfer to ACD
+              targetQueue:
+                lit:
+                  name: CXaC_Q_Email
+              priority:
+                lit: 0
+              preferredAgents:
+                noValue: true
+              languageSkill:
+                noValue: true
+              appendSkills:
+                lit: true

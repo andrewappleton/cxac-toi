@@ -1,0 +1,11 @@
+name,description,acw_wrapup_prompt,acw_timeout_ms
+CXaC_Q_Support,Queue for CXaC Tech Support Calls,AGENT_REQUESTED,60000
+CXaC_Q_Sales,Queue for CXaC Sales,MANDATORY_TIMEOUT,30000
+CXaC_Q_Info,Queue for CXaC Info Line,MANDATORY_FORCED_TIMEOUT,10000
+CXaC_Q_MM_Red,Queue for Red M&Ms,MANDATORY_TIMEOUT,30000
+CXaC_Q_MM_Orange,Queue for Orange M&Ms,MANDATORY_TIMEOUT,30000
+CXaC_Q_MM_Green,Queue for Green M&Ms,MANDATORY_TIMEOUT,30000
+CXaC_Q_MM_Blue,Queue for Blue M&Ms,MANDATORY_TIMEOUT,30000
+CXaC_Q_MM_Yellow,Queue for Yellow M&Ms,MANDATORY_TIMEOUT,30000
+CXaC_Q_MM_Pink,Queue for Pink M&Ms,MANDATORY_TIMEOUT,30000
+CXaC_Q_MM_Purple,Queue for Purple M&Ms,MANDATORY_TIMEOUT,30000

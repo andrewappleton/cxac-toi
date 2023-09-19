@@ -12,6 +12,7 @@
 ## 2023.09.19
 
 ---
+## Rename any terraform.tfvars.txt file to terraform.tfvars
 
 * ## Session #1: CX as Code ##
     * What is CX as Code?
